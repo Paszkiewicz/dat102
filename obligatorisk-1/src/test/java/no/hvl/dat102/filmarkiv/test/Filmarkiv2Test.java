@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import no.hvl.dat102.filmarkiv.adt.FilmarkivADT;
 import no.hvl.dat102.filmarkiv.impl.Film;
-import no.hvl.dat102.filmarkiv.impl.Filmarkiv;
+import no.hvl.dat102.filmarkiv.impl.Filmarkiv2;
 import no.hvl.dat102.filmarkiv.impl.Sjanger;
 
 public class FilmarkivTest {
@@ -20,7 +20,7 @@ public class FilmarkivTest {
 
     @BeforeEach
     void setUp() {
-        arkiv = new Filmarkiv(10);
+        arkiv = new Filmarkiv2(10);
         
         f1 = new Film(1, "Spielberg", "Jaws", 1975, Sjanger.THRILLER, "Universal");
         f2 = new Film(2, "Lucas", "Star Wars", 1977, Sjanger.SCI_FI, "Fox");
