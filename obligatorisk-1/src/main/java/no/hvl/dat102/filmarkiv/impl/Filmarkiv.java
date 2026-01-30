@@ -10,6 +10,10 @@ public class Filmarkiv implements FilmarkivADT {
         arkiv = new Film[kapasitet];
         antall = 0;
     }
+    public Filmarkiv() {
+        filmtabell = new Film[0];
+        antall = 0;
+    }
 
     private void utvid() {
         Film[] ny = new Film[arkiv.length * 2];

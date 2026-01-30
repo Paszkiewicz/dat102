@@ -16,6 +16,9 @@ public class Meny {
         this.arkiv = arkiv;
     }
 
+    /**
+     * Arrow in case statement supported from Java 14 onwards onlyJava(1073743544)
+     */
     public void start() {
 
         // forhåndsdata
