@@ -14,6 +14,7 @@ Dette prosjektet inneholder implementasjon av et filmarkiv ved bruk av to ulike 
 | Daniel Aarsand               | brasswhisper-hub    |
 
 ## Innleveringsinstruksjoner
+
 Innleveringen skal leveres inn som en zip med navnet **Oblig1_Grx.zip**, hvor x i Gr**x** er gruppe nummeret.
 
 **Zip-en skal inneholde følgende:**
@@ -32,22 +33,26 @@ Innleveringen skal leveres inn som en zip med navnet **Oblig1_Grx.zip**, hvor x 
 Kildekoden er organisert i følgende pakker i henhold til kravene:
 
 ### no.hvl.dat102.filmarkiv.adt
-* `FilmarkivADT.java`: Grensesnitt som definerer de pålagte operasjonene for arkivet.
+
+- `FilmarkivADT.java`: Grensesnitt som definerer de pålagte operasjonene for arkivet.
 
 ### no.hvl.dat102.filmarkiv.impl
-* `Film.java`: Dataobjekt (POJO) for lagring av filminformasjon.
-* `Sjanger.java`: Enum-klasse med oversikt over filmsjangre.
-* `Filmarkiv.java`: Implementasjon basert på en tabell (Array).
-* `LinearNode.java`: Hjelpeklasse for den kjedede strukturen.
-* `Filmarkiv2.java`: Implementasjon basert på en kjedet struktur (LinearNode).
+
+- `Film.java`: Dataobjekt (POJO) for lagring av filminformasjon.
+- `Sjanger.java`: Enum-klasse med oversikt over filmsjangre.
+- `Filmarkiv.java`: Implementasjon basert på en tabell (Array).
+- `LinearNode.java`: Hjelpeklasse for den kjedede strukturen.
+- `Filmarkiv2.java`: Implementasjon basert på en kjedet struktur (LinearNode).
 
 ### no.hvl.dat102.filmarkiv.klient
-* `FilmarkivMain.java`: Inneholder main-metoden som starter programmet.
-* `Meny.java`: Håndterer brukerlogikk og kaller på tekstgrensesnittet.
-* `Tekstgrensesnitt.java`: Håndterer all kommunikasjon (Scanner/System.out) med brukeren.
+
+- `FilmarkivMain.java`: Inneholder main-metoden som starter programmet.
+- `Meny.java`: Håndterer brukerlogikk og kaller på tekstgrensesnittet.
+- `Tekstgrensesnitt.java`: Håndterer all kommunikasjon (Scanner/System.out) med brukeren.
 
 ### no.hvl.dat102.filmarkiv.test
-* `FilmarkivTest.java`: JUnit 5 tester for å verifisere funksjonaliteten i arkivene.
+
+- `FilmarkivTest.java`: JUnit 5 tester for å verifisere funksjonaliteten i arkivene.
 
 ---
 
