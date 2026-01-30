@@ -1,8 +1,8 @@
 package no.hvl.dat102.filmarkiv.impl;
 
-import no.hvl.dat102.filmarkiv.adt.FilmarkivADT;
+import java.util.Objects;
 
-public class Film implements FilmarkivADT {
+public class Film {
 
     private int filmnummer;
     private String filmskaper;
@@ -12,7 +12,6 @@ public class Film implements FilmarkivADT {
     private String filmselskap;
 
     public Film() {
-
     }
 
     public Film(int filmnummer, String filmskaper, String tittel, int utgivelsesaar, Sjanger sjanger, String filmselskap) {
@@ -24,86 +23,66 @@ public class Film implements FilmarkivADT {
         this.filmselskap = filmselskap;
     }
 
-    public void setFilmnummer(int filmnummer) {
-        this.filmnummer = filmnummer;
-    }
-
-    public int getFilnummer() {
+    // Get- og set-metoder
+    public int getFilmnummer() {
         return filmnummer;
     }
 
-    public void setFilmskaper(String filmskaper) {
-        this.filmskaper = filmskaper;
+    public void setFilmnummer(int filmnummer) {
+        this.filmnummer = filmnummer;
     }
 
     public String getFilmskaper() {
         return filmskaper;
     }
 
-    public void setTittel(String tittel) {
-        this.tittel = tittel;
+    public void setFilmskaper(String filmskaper) {
+        this.filmskaper = filmskaper;
     }
 
     public String getTittel() {
         return tittel;
     }
 
-    public void setUtgivelsesaar(int utgivelsesaar) {
-        this.utgivelsesaar = utgivelsesaar;
+    public void setTittel(String tittel) {
+        this.tittel = tittel;
     }
 
     public int getUtgivelsesaar() {
         return utgivelsesaar;
     }
 
-    public void setSjanger(Sjanger sjanger) {
-        this.sjanger = sjanger;
+    public void setUtgivelsesaar(int utgivelsesaar) {
+        this.utgivelsesaar = utgivelsesaar;
     }
 
     public Sjanger getSjanger() {
         return sjanger;
     }
 
-    public void setFilmselskap(String filmselskap) {
-        this.filmselskap = filmselskap;
+    public void setSjanger(Sjanger sjanger) {
+        this.sjanger = sjanger;
     }
 
     public String getFilmselskap() {
         return filmselskap;
     }
 
+    public void setFilmselskap(String filmselskap) {
+        this.filmselskap = filmselskap;
+    }
+
+    // To filmer er like om de har samme nummer [cite: 40]
     @Override
-    public Film finnFilm(int nr) {
-        return null;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Film film = (Film) o;
+        return filmnummer == film.filmnummer;
     }
 
     @Override
-    public void leggTilFilm(Film nyFilm) {
-
-    }
-
-    @Override
-    public boolean slettFilm(int filmnr) {
-        return false;
-    }
-
-    @Override
-    public Film[] soekTittel(String delstreng) {
-        return new Film[0];
-    }
-
-    @Override
-    public Film[] soekProdusent(String delstreng) {
-        return new Film[0];
-    }
-
-    @Override
-    public int antall(Sjanger sjanger) {
-        return 0;
-    }
-
-    @Override
-    public int antall() {
-        return 0;
+    public int hashCode() {
+        return Objects.hash(filmnummer);
     }
 }
