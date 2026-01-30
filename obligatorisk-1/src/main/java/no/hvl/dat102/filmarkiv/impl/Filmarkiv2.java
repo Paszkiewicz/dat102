@@ -11,6 +11,11 @@ public class Filmarkiv2 implements FilmarkivADT {
         start = null;
     }
 
+    public Filmarkiv2(int i) {
+        antall = i;
+        start = null;
+    }
+
     @Override
     public Film finnFilm(int nr) {
         LinearNode<Film> denne = start;

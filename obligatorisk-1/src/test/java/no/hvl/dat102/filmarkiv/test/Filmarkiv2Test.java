@@ -12,7 +12,7 @@ import no.hvl.dat102.filmarkiv.impl.Film;
 import no.hvl.dat102.filmarkiv.impl.Filmarkiv2;
 import no.hvl.dat102.filmarkiv.impl.Sjanger;
 
-public class FilmarkivTest {
+public class Filmarkiv2Test {
     private FilmarkivADT arkiv;
     private Film f1;
     private Film f2;

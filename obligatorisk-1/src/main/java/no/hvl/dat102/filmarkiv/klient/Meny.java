@@ -14,6 +14,9 @@ public class Meny {
         this.filmarkiv = filmarkiv;
     }
 
+    /**
+     * Arrow in case statement supported from Java 14 onwards onlyJava(1073743544)
+     */
     public void start() {
         // Legg inn noen testdata først
         filmarkiv.leggTilFilm(new Film(1, "Spielberg", "Jaws", 1975, Sjanger.THRILLER, "Universal"));

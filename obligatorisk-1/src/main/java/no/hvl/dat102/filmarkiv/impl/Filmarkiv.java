@@ -10,6 +10,10 @@ public class Filmarkiv implements FilmarkivADT {
         filmtabell = new Film[kapasitet];
         antall = 0;
     }
+    public Filmarkiv() {
+        filmtabell = new Film[0];
+        antall = 0;
+    }
 
     @Override
     public Film finnFilm(int nr) {
