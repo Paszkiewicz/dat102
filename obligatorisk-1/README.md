@@ -22,3 +22,27 @@ Innleveringen skal leveres inn som en zip med navnet **Oblig1_Grx.zip**, hvor x 
   - Svar på teorispørsmål.
 
 - **Et IntelliJ-prosjekt med løsninger på programmeringsoppgavene**
+
+----
+
+programmeringsdel:
+
+```Plain Text
+src/
+└── no/hvl/dat102/filmarkiv/
+    ├── adt/
+    │   └── FilmarkivADT.java
+    ├── impl/
+    │   ├── Film.java
+    │   ├── Filmarkiv.javas
+    │   ├── Filmarkiv2.java
+    │   ├── LinearNode.java
+    │   └── Sjanger.java
+    ├── klient/
+    │   ├── FilmarkivMain.java
+    │   ├── Meny.java
+    │   └── Tekstgrensesnitt.java
+    └── test/
+        └── FilmarkivTest.java
+```
+
