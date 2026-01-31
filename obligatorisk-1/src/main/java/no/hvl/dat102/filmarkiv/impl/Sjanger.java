@@ -14,4 +14,5 @@ public enum Sjanger {
         }
         return null;
     }
+
 }

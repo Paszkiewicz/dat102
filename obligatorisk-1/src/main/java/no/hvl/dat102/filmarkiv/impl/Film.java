@@ -28,7 +28,7 @@ public class Film implements FilmarkivADT {
         this.filmnummer = filmnummer;
     }
 
-    public int getFilnummer() {
+    public int getFilmnummer() {
         return filmnummer;
     }
 
@@ -98,7 +98,7 @@ public class Film implements FilmarkivADT {
     }
 
     @Override
-    public int antall(Sjanger sjanger) {
+    public int antallSjanger(Sjanger sjanger) {
         return 0;
     }
 
