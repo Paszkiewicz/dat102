@@ -1,6 +1,6 @@
-# DAT102 - Obligatorisk innlevering 1
+# Oblig 1 - DAT102 (Vår 2026)
 
-**Leveringsfrist**: 1. februar 2026
+Dette prosjektet inneholder implementasjon av et filmarkiv ved bruk av to ulike datastrukturer: tabell og kjedet struktur. Prosjektet inneholder også en teoretisk analyse av algoritmers effektivitet.
 
 **Gruppemedlemmer** - *Navn (Github brukernavn)*
 - Bartosz Paszkiewicz (Paszkiewicz)
@@ -10,12 +10,15 @@
 
 
 ## Innleveringsinstruksjoner
-Innleveringen skal leveres inn som en zip med navnet **Oblig1_Grx.zip**, hvor x i Gr**x** er gruppe nummeret. **Zip-en skal inneholde følgende**:
+
+Innleveringen skal leveres inn som en zip med navnet **Oblig1_Grx.zip**, hvor x i Gr**x** er gruppe nummeret.
+
+**Zip-en skal inneholde følgende:**
 
 - **En pdf med**:
-    - Liste av gruppemedlemer som er med på innleveringen.
-    - Skjermbilde fra kjøring av programmene.
-    - Svar på teorispørsmål.
+  - Liste av gruppemedlemer som er med på innleveringen.
+  - Skjermbilde fra kjøring av programmene.
+  - Svar på teorispørsmål.
 
 - **Et IntelliJ-prosjekt med løsninger på programmeringsoppgavene**
 ## 1. Prosjektstruktur og Filer
