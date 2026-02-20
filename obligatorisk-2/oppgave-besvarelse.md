@@ -51,43 +51,43 @@ her er $n$ størrelsen på datasettet som ble sortert
 
 Tabell for quicksortering
 
-| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
-| --- | --- | --- | --- |
-| 32 000 | 10 | 13.6 ms | 13 ms |
-| 64 000 | 10 | 13.6 ms | 28.9 ms |
-| 128 000 | 10 | 13.6 ms | 61.7 ms |
+| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --------- | --------------- | ---------------- | ------------------ |
+| 32 000    | 10              | 13.6 ms          | 13 ms              |
+| 64 000    | 10              | 13.6 ms          | 28.9 ms            |
+| 128 000   | 10              | 13.6 ms          | 61.7 ms            |
 
 Tabell for mergesortering
 
-| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
-| --- | --- | --- | --- |
-| 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | 13.6 ms | [Tid] ms |
-| 128 000 | 10 | 13.6 ms | [Tid] ms |
+| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --------- | --------------- | ---------------- | ------------------ |
+| 32 000    | 10              | [Tid] ms          | [Tid] ms          |
+| 64 000    | 10              | 13.6 ms          | [Tid] ms           |
+| 128 000   | 10              | 13.6 ms          | [Tid] ms           |
 
 Tabell for insertionsortering
 
-| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
-| --- | --- | --- | --- |
-| 32 000 | 10 | 68.5 ms | 68.5 ms |
-| 64 000 | 10 | 233.2 ms | 274.0 ms |
-| 128 000 | 10 | 865.2 ms | 1096.0 ms |
+| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --------- | --------------- | ---------------- | ------------------ |
+| 32 000    | 10              | 68.5 ms          | 68.5 ms            |
+| 64 000    | 10              | 233.2 ms         | 274.0 ms           |
+| 128 000   | 10              | 865.2 ms         | 1096.0 ms          |
 
 Tabell for selectionsortering
 
-| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
-| --- | --- | --- | --- |
-| 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | 13.6 ms | [Tid] ms |
-| 128 000 | 10 | 13.6 ms | [Tid] ms |
+| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --------- | --------------- | ---------------- | ------------------ |
+| 32 000    | 10              | [Tid] ms          | [Tid] ms          |
+| 64 000    | 10              | 13.6 ms          | [Tid] ms           |
+| 128 000   | 10              | 13.6 ms          | [Tid] ms           |
 
 Tabell for Kvikksortering
 
-| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
-| --- | --- | --- | --- |
-| 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | 13.6 ms | [Tid] ms |
-| 128 000 | 10 | 13.6 ms | [Tid] ms |
+| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --------- | --------------- | ---------------- | ------------------ |
+| 32 000    | 10              | [Tid] ms         | [Tid] ms           |
+| 64 000    | 10              | 13.6 ms          | [Tid] ms           |
+| 128 000   | 10              | 13.6 ms          | [Tid] ms           |
 
 ### Teorispørsmål
 
