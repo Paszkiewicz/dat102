@@ -1,13 +1,13 @@
 package no.hvl.dat102.filmarkiv.impl;
 
-import no.hvl.dat102.filmarkiv.adt.FilmarkivADT;
+import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
 
 public class Filmarkiv implements FilmarkivADT {
-    private Film[] filmtabell;
+    private Film[] arkiv;
     private int antall;
 
     public Filmarkiv(int kapasitet) {
-        filmtabell = new Film[kapasitet];
+        arkiv = new Film[kapasitet];
         antall = 0;
     }
     public Filmarkiv() {
@@ -15,40 +15,38 @@ public class Filmarkiv implements FilmarkivADT {
         antall = 0;
     }
 
+    private void utvid() {
+        Film[] ny = new Film[arkiv.length * 2];
+        System.arraycopy(arkiv, 0, ny, 0, antall);
+        arkiv = ny;
+    }
+
+    private Film[] trim(Film[] tab, int n) {
+        Film[] ny = new Film[n];
+        System.arraycopy(tab, 0, ny, 0, n);
+        return ny;
+    }
+
     @Override
     public Film finnFilm(int nr) {
         for (int i = 0; i < antall; i++) {
-            if (filmtabell[i].getFilmnummer() == nr) {
-                return filmtabell[i];
-            }
+            if (arkiv[i].getFilmnr() == nr) return arkiv[i];
         }
         return null;
     }
 
     @Override
     public void leggTilFilm(Film nyFilm) {
-        if (antall == filmtabell.length) {
-            utvid();
-        }
-        filmtabell[antall] = nyFilm;
-        antall++;
-    }
-
-    private void utvid() {
-        // Dobler størrelsen på tabellen når den er full
-        Film[] nyTabell = new Film[filmtabell.length * 2];
-        System.arraycopy(filmtabell, 0, nyTabell, 0, filmtabell.length);
-        filmtabell = nyTabell;
+        if (antall == arkiv.length) utvid();
+        arkiv[antall++] = nyFilm;
     }
 
     @Override
     public boolean slettFilm(int filmnr) {
         for (int i = 0; i < antall; i++) {
-            if (filmtabell[i].getFilmnummer() == filmnr) {
-                // Flytter den siste filmen til plassen vi sletter for å unngå "hull" 
-                filmtabell[i] = filmtabell[antall - 1];
-                filmtabell[antall - 1] = null;
-                antall--;
+            if (arkiv[i].getFilmnr() == filmnr) {
+                arkiv[i] = arkiv[antall - 1];
+                arkiv[--antall] = null;
                 return true;
             }
         }
@@ -56,51 +54,40 @@ public class Filmarkiv implements FilmarkivADT {
     }
 
     @Override
-    public int antall() {
-        return antall;
-    }
-
-    @Override
     public Film[] soekTittel(String delstreng) {
-        Film[] treff = new Film[antall];
-        int iTreff = 0;
+        Film[] res = new Film[antall];
+        int n = 0;
         for (int i = 0; i < antall; i++) {
-            if (filmtabell[i].getTittel().toLowerCase().contains(delstreng.toLowerCase())) {
-                treff[iTreff] = filmtabell[i];
-                iTreff++;
+            if (arkiv[i].getTittel().toLowerCase().contains(delstreng.toLowerCase())) {
+                res[n++] = arkiv[i];
             }
         }
-        return trimTab(treff, iTreff);
+        return trim(res, n);
     }
 
     @Override
     public Film[] soekProdusent(String delstreng) {
-        Film[] treff = new Film[antall];
-        int iTreff = 0;
+        Film[] res = new Film[antall];
+        int n = 0;
         for (int i = 0; i < antall; i++) {
-            if (filmtabell[i].getFilmskaper().toLowerCase().contains(delstreng.toLowerCase())) {
-                treff[iTreff] = filmtabell[i];
-                iTreff++;
+            if (arkiv[i].getProdusent().toLowerCase().contains(delstreng.toLowerCase())) {
+                res[n++] = arkiv[i];
             }
         }
-        return trimTab(treff, iTreff);
+        return trim(res, n);
     }
 
     @Override
     public int antall(Sjanger sjanger) {
-        int antallSjanger = 0;
+        int n = 0;
         for (int i = 0; i < antall; i++) {
-            if (filmtabell[i].getSjanger() == sjanger) {
-                antallSjanger++;
-            }
+            if (arkiv[i].getSjanger() == sjanger) n++;
         }
-        return antallSjanger;
+        return n;
     }
 
-    // Hjelpemetode for å trimme tabellen til riktig størrelse
-    private Film[] trimTab(Film[] tab, int n) {
-        Film[] nytab = new Film[n];
-        System.arraycopy(tab, 0, nytab, 0, n);
-        return nytab;
+    @Override
+    public int antall() {
+        return antall;
     }
 }
