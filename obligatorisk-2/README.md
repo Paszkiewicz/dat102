@@ -21,7 +21,7 @@ Jeg har implementert en `ParentesSjekker` som bruker en stabel (`TabellStabel`) 
 
 ### Skjermbilde av kjøring (JUnit-tester)
 
-![testresultater til junit testen](assets/testresultat-u6-o1.png)
+![testresultater til junit](assets/testresultat-u6-o1.png)
 
 ---
 
