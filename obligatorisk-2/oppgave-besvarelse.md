@@ -49,45 +49,37 @@ Her er gjennomsnittstidene målt på min maskin for de ulike algoritmene.
 
 her er $n$ størrelsen på datasettet som ble sortert
 
-Tabell for quicksortering
+**Tabell for quick sort**
 
 | $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | 13.6 ms          | 13 ms              |
-| 64 000    | 10              | 13.6 ms          | 28.9 ms            |
-| 128 000   | 10              | 13.6 ms          | 61.7 ms            |
+| 32 000    | 10              | 13.6          ms | 13              ms |
+| 64 000    | 10              | 28.0          ms | 28.9            ms |
+| 128 000   | 10              | 54.7          ms | 61.7            ms |
 
-Tabell for mergesortering
-
-| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
-| --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | [Tid] ms         | [Tid] ms           |
-| 64 000    | 10              | 13.6 ms          | [Tid] ms           |
-| 128 000   | 10              | 13.6 ms          | [Tid] ms           |
-
-Tabell for insertionsortering
+**Tabell for merge sort**
 
 | $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | 68.5 ms          | 68.5 ms            |
-| 64 000    | 10              | 233.2 ms         | 274.0 ms           |
-| 128 000   | 10              | 865.2 ms         | 1096.0 ms          |
+| 32 000    | 10              | 761.7         ms | [Tid]           ms |
+| 64 000    | 10              | 2567.4        ms | [Tid]           ms |
+| 128 000   | 10              | 8815.1        ms | [Tid]           ms |
 
-Tabell for selectionsortering
-
-| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
-| --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | [Tid] ms         | [Tid] ms           |
-| 64 000    | 10              | 13.6 ms          | [Tid] ms           |
-| 128 000   | 10              | 13.6 ms          | [Tid] ms           |
-
-Tabell for Kvikksortering
+**Tabell for insertion sort**
 
 | $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | [Tid] ms         | [Tid] ms           |
-| 64 000    | 10              | 13.6 ms          | [Tid] ms           |
-| 128 000   | 10              | 13.6 ms          | [Tid] ms           |
+| 32 000    | 10              | 68.5          ms | 68.5            ms |
+| 64 000    | 10              | 233.2         ms | 274.0           ms |
+| 128 000   | 10              | 865.2         ms | 1096.0          ms |
+
+**Tabell for selection sort**
+
+| $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --------- | --------------- | ---------------- | ------------------ |
+| 32 000    | 10              | 517.7         ms | [Tid]           ms |
+| 64 000    | 10              | 2254.4        ms | [Tid]           ms |
+| 128 000   | 10              | 8164.7        ms | [Tid]           ms |
 
 ### Teorispørsmål
 
