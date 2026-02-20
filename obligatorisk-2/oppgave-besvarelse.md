@@ -61,7 +61,7 @@ Tabell for mergesortering
 
 | $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | [Tid] ms          | [Tid] ms          |
+| 32 000    | 10              | [Tid] ms         | [Tid] ms           |
 | 64 000    | 10              | 13.6 ms          | [Tid] ms           |
 | 128 000   | 10              | 13.6 ms          | [Tid] ms           |
 
@@ -77,7 +77,7 @@ Tabell for selectionsortering
 
 | $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | [Tid] ms          | [Tid] ms          |
+| 32 000    | 10              | [Tid] ms         | [Tid] ms           |
 | 64 000    | 10              | 13.6 ms          | [Tid] ms           |
 | 128 000   | 10              | 13.6 ms          | [Tid] ms           |
 
@@ -101,5 +101,4 @@ Tabell for Kvikksortering
 
 ## Vedlegg: Skjermbilder av kjøring
 
-> *Legg til skjermbilder som viser tidsmålingene i konsollen for de ulike algoritmene.*
-
+![alt text](assets/mergesort-result-time.png)
