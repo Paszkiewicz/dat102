@@ -34,7 +34,7 @@ public class selectionsort {
 
         long start = System.currentTimeMillis();
 
-        selectionSort(array, n-1);
+        selectionSort(array, n);
 
         long slutt = System.currentTimeMillis();
 
