@@ -14,12 +14,16 @@ public class InsertionSortC {
             }
         }
         
-        for (int i = 1; i < array.length - 1; i += 2) {
+        int tall = 1;
+
+        for (int i = tall; i < array.length - 1; i += 2) {
             int v1 = array[i];
             int v2 = array[i + 1];
             
             if (v1 > v2) { 
-                int t = v1; v1 = v2; v2 = t;
+                int t = v1;
+                v1 = v2;
+                v2 = t;
             }
 
             int j = i - 1;
@@ -36,17 +40,32 @@ public class InsertionSortC {
                 j--;
             }
             array[j + 1] = v1;
+
+            tall = i;
         }
+
+        // if (tall < array.length) {
+        //         int key = array[tall];
+        //         int j = tall - 1;
+                
+        //         while (array[j] < key) {
+        //             array[j + 1] = array[j];
+        //             j--;
+        //         }
+                
+        //         array[j + 1] = key;
+        // }
     }
+
 
     public static void main(String[] args) {
         Random tilfeldig = new Random();
         
-        int n = 350000;
+        int n = 10;
         int[] array = new int[n];
         
         for (int i= 0; i < n; i++){
-            array[i] = tilfeldig.nextInt();
+            array[i] = tilfeldig.nextInt(11);
         }
         
         long start = System.currentTimeMillis();
@@ -58,8 +77,8 @@ public class InsertionSortC {
         System.out.println("Tid brukt: " + (slutt - start) + " ms");
         System.out.println("Tid i sekund: " + ((slutt - start) / 1000.0) + "s" );
         
-        // for (int num : array) {
-        //    System.out.print(num + " ");
-        // }
+        for (int num : array) {
+           System.out.print(num + " ");
+        }
     }
 }
