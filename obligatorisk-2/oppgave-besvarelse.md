@@ -103,6 +103,3 @@ Tabell for Kvikksortering
 
 > *Legg til skjermbilder som viser tidsmålingene i konsollen for de ulike algoritmene.*
 
----
-
-**Vil du at jeg skal hjelpe deg med å beregne konstanten  for en av tabellene dine hvis du har målt en tid for ?**
