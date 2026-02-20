@@ -2,7 +2,7 @@ package no.paszkiewicz.insertionsort;
 
 import java.util.Random;
 
-public class InsertionSort {
+public class InsertionSortC {
 
     public static void insertionSort(int[] array) {
 
@@ -14,26 +14,39 @@ public class InsertionSort {
             }
         }
         
-        for (int i = 2; i < array.length; i++) {
-            int key = array[i];
-            int j = i - 1;
+        for (int i = 1; i < array.length - 1; i += 2) {
+            int v1 = array[i];
+            int v2 = array[i + 1];
+            
+            if (v1 > v2) { 
+                int t = v1; v1 = v2; v2 = t;
+            }
 
-            while (array[j] > key) {
+            int j = i - 1;
+            
+            while (array[j] > v2) {
+                array[j + 2] = array[j];
+                j--;
+            }
+            
+            array[j + 2] = v2;
+            
+            while (array[j] > v1) {
                 array[j + 1] = array[j];
                 j--;
             }
-            array[j + 1] = key;
+            array[j + 1] = v1;
         }
     }
 
     public static void main(String[] args) {
         Random tilfeldig = new Random();
         
-        int n = 200000;
+        int n = 350000;
         int[] array = new int[n];
         
         for (int i= 0; i < n; i++){
-            array[i] = tilfeldig.nextInt(99);
+            array[i] = tilfeldig.nextInt();
         }
         
         long start = System.currentTimeMillis();
