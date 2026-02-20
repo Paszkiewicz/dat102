@@ -50,15 +50,45 @@ Etter å ha endret koden til a finne den minste verdien først for å så sette 
 
 Her er gjennomsnittstidene målt på min maskin for de ulike algoritmene.
 
-Tabell for Kvikksortering
+Tabell for quicksortering
 
-|  | Antall målinger | Målt tid (snitt) | Teoretisk tid () |
+|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --- | --- | --- | --- |
 | 32 000 | 10 | [Tid] ms | [Tid] ms |
 | 64 000 | 10 | [Tid] ms | [Tid] ms |
 | 128 000 | 10 | [Tid] ms | [Tid] ms |
 
-*(Gjenta lignende tabeller for Insertion Sort, Selection Sort og Merge Sort i PDF-en din)*.
+Tabell for mergesortering
+
+|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --- | --- | --- | --- |
+| 32 000 | 10 | [Tid] ms | [Tid] ms |
+| 64 000 | 10 | [Tid] ms | [Tid] ms |
+| 128 000 | 10 | [Tid] ms | [Tid] ms |
+
+Tabell for insertionsortering
+
+|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --- | --- | --- | --- |
+| 32 000 | 10 | [Tid] ms | [Tid] ms |
+| 64 000 | 10 | [Tid] ms | [Tid] ms |
+| 128 000 | 10 | [Tid] ms | [Tid] ms |
+
+Tabell for selectionsortering
+
+|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --- | --- | --- | --- |
+| 32 000 | 10 | [Tid] ms | [Tid] ms |
+| 64 000 | 10 | [Tid] ms | [Tid] ms |
+| 128 000 | 10 | [Tid] ms | [Tid] ms |
+
+Tabell for Kvikksortering
+
+|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| --- | --- | --- | --- |
+| 32 000 | 10 | [Tid] ms | [Tid] ms |
+| 64 000 | 10 | [Tid] ms | [Tid] ms |
+| 128 000 | 10 | [Tid] ms | [Tid] ms |
 
 ### Teorispørsmål
 
