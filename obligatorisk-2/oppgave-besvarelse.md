@@ -21,7 +21,7 @@ Jeg har implementert en `ParentesSjekker` som bruker en stabel (`TabellStabel`) 
 
 ### Skjermbilde av kjøring (JUnit-tester)
 
-![alt text](assets/testresultat-u6-o1.png)
+![testresultater til junit testen](assets/testresultat-u6-o1.png)
 
 ---
 
@@ -61,9 +61,9 @@ her er $n$ størrelsen på datasettet som ble sortert
 
 | $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | 761.7         ms | [Tid]           ms |
-| 64 000    | 10              | 2567.4        ms | [Tid]           ms |
-| 128 000   | 10              | 8815.1        ms | [Tid]           ms |
+| 32 000    | 10              | 761.7         ms | 761.7           ms |
+| 64 000    | 10              | 2567.4        ms | 1622.4          ms |
+| 128 000   | 10              | 8815.1        ms | 3450.5          ms |
 
 **Tabell for insertion sort**
 
@@ -77,20 +77,62 @@ her er $n$ størrelsen på datasettet som ble sortert
 
 | $n$       | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --------- | --------------- | ---------------- | ------------------ |
-| 32 000    | 10              | 517.7         ms | [Tid]           ms |
-| 64 000    | 10              | 2254.4        ms | [Tid]           ms |
-| 128 000   | 10              | 8164.7        ms | [Tid]           ms |
+| 32 000    | 10              | 517.7         ms | 517.7           ms |
+| 64 000    | 10              | 2254.4        ms | 2070.8          ms |
+| 128 000   | 10              | 8164.7        ms | 8283.2          ms |
 
 ### Teorispørsmål
 
 **1. Samsvarer de teoretiske resultatene med de målte?**
-[Ditt svar her: Diskuter om tiden 4-dobles for -algoritmer når  dobles].
+
+Ja, de målte resultatene samsvarer i stor grad med de teoretiske forventningene,
+spesielt for algoritmene med kvadratisk kjøretid:
+
+* **$O(n^2)$-algoritmer (Selection og Insertion Sort):**
+  Teorien tilsier at tiden skal firedobles når datamengden $n$ dobles.
+  Mine målinger viser dette tydelig.
+  For eksempel økte Selection Sort fra **517.7 ms** til **2254.4 ms** (faktor på ~4.35).
+  Insertion Sort fulgte også dette mønsteret tett.
+
+* **$O(n \log n)$-algoritmer (Quick Sort):**
+  Quick Sort viser en stabil vekst som ligger svært nær
+  de teoretiske beregningene (faktor på ~2.1).
+  Dette bekrefter algoritmens effektivitet på store datasett.
+
+* **Avvik i Merge Sort:**
+  Mine målinger for Merge Sort viser et betydelig avvik fra teorien
+  ved økende $n$ (fra 761 ms til 2567 ms er en økning på faktor ~3.3,
+  som er høyere enn teoretisk ~2.1).
+  Dette skyldes sannsynligvis overhead i Java
+  ved opprettelse av mange hjelpetabeller,
+  som fører til mer arbeid for "Garbage Collector" når minnebruken øker.
 
 **2. Hva skjer når Quicksort sorterer en tabell der alle elementene er like?**
-[Ditt svar her: Forklar om partisjoneringen blir ubalansert og hvordan dette påvirker kjøretiden (ofte mot )].
+
+Når Quicksort sorterer en tabell der alle elementene er like,
+kan man oppleve algoritmens "verste tilfelle" (worst case)
+avhengig av implementasjonen:
+
+* **Ubalansert partisjonering:**
+  Hvis partisjoneringslogikken ikke håndterer like verdier
+  spesifikt (ved å stoppe eller bytte på like verdier),
+  vil pivot-elementet dele tabellen svært skjevt.
+  Dette resulterer i at man får én partisjon med $n-1$ elementer og én med $0$,
+  i stedet for to omtrent like store deler.
+
+* **Kjøretid:**
+  Den effektive kjøretiden på $O(n \log n)$ degenererer da til **$O(n^2)$**.
+
+* **Stack Overflow:**
+  Siden partisjoneringen blir så ubalansert,
+  blir den rekursive dybden veldig stor ($n$ nivåer i stedet for $\log n$).
+  Dette fører ofte til en `StackOverflowError` i Java
+  fordi minnet til metodestabelen går tomt.
 
 ---
 
 ## Vedlegg: Skjermbilder av kjøring
 
-![alt text](assets/mergesort-result-time.png)
+![merge sort result time](assets/mergesort-result-time.png)
+![selection sort-result-time](assets/selectionsort-result-time.png)
+![quick sort-result-time](assets/quicksort-result-time.png)
