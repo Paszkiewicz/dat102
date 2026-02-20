@@ -5,8 +5,11 @@ import java.util.Random;
 public class InsertionSortC {
 
     public static void insertionSort(int[] array) {
+        int n = array.length;
+        if (n < 2) return;
 
-        for (int i = array.length - 1; i > 0; i--) {
+        // 1. Flytt minste element fremst
+        for (int i = n - 1; i > 0; i--) {
             if (array[i] < array[i - 1]) {
                 int temp = array[i];
                 array[i] = array[i - 1];
@@ -14,9 +17,9 @@ public class InsertionSortC {
             }
         }
         
-        int tall = 1;
-
-        for (int i = tall; i < array.length - 1; i += 2) {
+        // 2. Sorter to og to
+        int i = 1;
+        for (; i < n - 1; i += 2) {
             int v1 = array[i];
             int v2 = array[i + 1];
             
@@ -27,34 +30,33 @@ public class InsertionSortC {
             }
 
             int j = i - 1;
-            
+            // Flytt elementer for å gi plass til v2
             while (array[j] > v2) {
                 array[j + 2] = array[j];
                 j--;
             }
             
             array[j + 2] = v2;
-            
+            // Flytt elementer for å gi plass til v1 (den minste av paret)
             while (array[j] > v1) {
                 array[j + 1] = array[j];
                 j--;
             }
             array[j + 1] = v1;
-
-            tall = i;
         }
 
-        // if (tall < array.length) {
-        //         int key = array[tall];
-        //         int j = tall - 1;
+        // 3. Håndter siste elementet hvis n er oddetall
+        if (i < n) {
+                int key = array[i];
+                int j = i - 1;
                 
-        //         while (array[j] < key) {
-        //             array[j + 1] = array[j];
-        //             j--;
-        //         }
+                while (array[j] > key) {
+                    array[j + 1] = array[j];
+                    j--;
+                }
                 
-        //         array[j + 1] = key;
-        // }
+                array[j + 1] = key;
+        }
     }
 
 
