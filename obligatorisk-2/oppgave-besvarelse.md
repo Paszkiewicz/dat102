@@ -21,11 +21,7 @@ Jeg har implementert en `ParentesSjekker` som bruker en stabel (`TabellStabel`) 
 
 ### Skjermbilde av kjøring (JUnit-tester)
 
-> 
-> Lim inn skjermbilde her som viser at `ParentesSjekkerTest` kjører grønt på de 5 testtilfellene fra oppgaven.
-> 
-> 
-
+![alt text](assets/image.png)
 ---
 
 ## Oppgave 2: Optimalisert Insertion Sort (Uke 7, Oppgave 1)
@@ -40,7 +36,7 @@ Jeg har implementert en kombinert optimalisering av Insertion Sort som inkludere
 
 ### Observasjoner
 
-Etter å ha endret koden til a finne den minste verdien først for å så sette den ved index = 0, ble det observert en tids reduksjon fra cirka 8.350 til 7.950 s.
+Etter å ha endret koden til a finne den minste verdien først for å så sette den ved index = 0, og flytte to elementer av ganger ble det observert en tids reduksjon fra $12.2 s$ til $5.4 s$.
 
 **Analyse:** Ved å flytte to elementer av gangen reduseres antall sammenligninger i den indre løkken, og vaktposten fjerner behovet for å sjekke om indeksen  i hver iterasjon.
 
@@ -50,45 +46,37 @@ Etter å ha endret koden til a finne den minste verdien først for å så sette 
 
 Her er gjennomsnittstidene målt på min maskin for de ulike algoritmene.
 
+her er $n$ størrelsen på datasettet som ble sortert
+
 Tabell for quicksortering
 
-|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --- | --- | --- | --- |
 | 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | [Tid] ms | [Tid] ms |
-| 128 000 | 10 | [Tid] ms | [Tid] ms |
 
 Tabell for mergesortering
 
-|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --- | --- | --- | --- |
 | 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | [Tid] ms | [Tid] ms |
-| 128 000 | 10 | [Tid] ms | [Tid] ms |
 
 Tabell for insertionsortering
 
-|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --- | --- | --- | --- |
-| 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | [Tid] ms | [Tid] ms |
-| 128 000 | 10 | [Tid] ms | [Tid] ms |
+| random | 10 | [Tid] ms | [Tid] ms |
 
 Tabell for selectionsortering
 
-|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --- | --- | --- | --- |
 | 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | [Tid] ms | [Tid] ms |
-| 128 000 | 10 | [Tid] ms | [Tid] ms |
 
 Tabell for Kvikksortering
 
-|  | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
+| $n$ | Antall målinger | Målt tid (snitt) | Teoretisk tid (ms) |
 | --- | --- | --- | --- |
 | 32 000 | 10 | [Tid] ms | [Tid] ms |
-| 64 000 | 10 | [Tid] ms | [Tid] ms |
-| 128 000 | 10 | [Tid] ms | [Tid] ms |
 
 ### Teorispørsmål
 
