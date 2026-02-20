@@ -25,7 +25,7 @@ public class selectionsort {
     public static void main(String[] args) {
         Random tilfeldig = new Random();
 
-        int n = 200000;
+        int n = 32000;
         int[] array = new int[n];
 
         for (int i = 0; i < n; i++){
