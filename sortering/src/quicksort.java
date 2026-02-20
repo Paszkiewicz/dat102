@@ -1,7 +1,9 @@
 import java.util.Random;
 
 public class quicksort {
-
+    /**
+     * this function needs the length of "a" to be longer than 3
+     */
     static void quickSort(int[] a, int forste, int siste) {
 
         if (forste < siste) {
